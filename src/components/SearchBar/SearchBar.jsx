@@ -1,40 +1,48 @@
+import s from "./SearchBar.module.css";
 import { useState } from "react";
-import toast from "react-hot-toast";
-import styles from "./SearchBar.module.css";
 
-const SearchBar = ({ setQuery }) => {
-  const [input, setInput] = useState("");
+const SearchBar = ({ query, setQuery, handleSearch }) => {
+  const [error, setError] = useState("");
 
-  const handleSubmit = (evt) => {
-    evt.preventDefault();
-    if (input.trim() === "") {
-      toast.error("The search field cannot be empty", {
-        duration: 2000,
-        position: "top-right",
-      });
-      return;
+  // Функція для валідації запиту та виклику функції пошуку
+  const validateAndSearch = () => {
+    if (!query.trim()) {
+      setError("Please enter a valid search query.");
+    } else {
+      setError("");
+      handleSearch();
     }
-    setQuery(input);
+  };
+
+  // Обробник натискання клавіші
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      validateAndSearch();
+    }
   };
 
   return (
-    <header className={styles.searchBar}>
-      <form onSubmit={handleSubmit} className={styles.form}>
+    <div className={s.container}>
+      <div className={s.inputContainer}>
         <input
           type="text"
-          name="search"
           autoComplete="off"
           autoFocus
-          placeholder="Search images and photos"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          className={styles.input}
+          placeholder="Enter search movie..."
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          onKeyDown={handleKeyDown} // Додаємо обробник натискання клавіші
+          className={s.input}
         />
-        <button type="submit" className={styles.button}>
+        <button
+          className={s.search}
+          onClick={validateAndSearch} // Виклик функції валідації при натисканні кнопки
+        >
           Search
         </button>
-      </form>
-    </header>
+      </div>
+      {error && <p className={s.error}>{error}</p>}
+    </div>
   );
 };
 

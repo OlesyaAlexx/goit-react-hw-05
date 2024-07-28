@@ -1,0 +1,20 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  padding-left: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgba(101, 0, 94, 0.7);
+}
+.link {
+  font-size: 45px;
+  text-decoration: none;
+  color: black;
+  text-shadow: 2px 1px 2px pink;
+}
+
+.active {
+  color: aliceblue;
+  text-shadow: 3px 2px 3px rgb(22, 20, 20);
+}

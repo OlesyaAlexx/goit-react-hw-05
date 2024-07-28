@@ -5,14 +5,11 @@
 
   color-scheme: light dark;
   color: #000;
-  background: linear-gradient(
-    315deg,
-    rgba(101, 0, 94, 0.7) 3%,
-    rgba(60, 132, 206, 0.7) 38%,
-    rgba(48, 238, 226, 0.7) 68%,
-    rgba(255, 25, 25, 0.7) 98%
-  );
-
+  background: rgb(
+    219,
+    205,
+    219
+  ); 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
