@@ -47,11 +47,11 @@
 }
 
 .link:hover {
-  color: rgb(31, 15, 28);
+  color: rgb(237, 245, 244);
 }
 .active {
   color: rgb(223, 187, 199);
-  background-color: rgb(138, 13, 131);
+  background-color: rgb(107, 9, 102);
 }
 .outletContainer {
   margin-top: 20px;
