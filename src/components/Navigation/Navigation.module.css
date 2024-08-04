@@ -6,6 +6,10 @@
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: rgba(101, 0, 94, 0.7);
+  border-bottom: 1px solid rgb(201, 218, 215);
+  border-top: 1px solid rgb(201, 218, 215);
+  border-radius: 12px;
+  box-shadow: 2px 2px 5px 2px rgb(12, 12, 12);
 }
 .link {
   font-size: 45px;

@@ -24,17 +24,22 @@ const MovieCast = () => {
   return (
     <div>
       <ul className={s.castList}>
-        {cast.map((actor) => (
-          <li key={actor.id} className={s.castItem}>
-            <img
-              src={`https://image.tmdb.org/t/p/w200${actor.profile_path}`}
-              alt={actor.name}
-              width="100"
-              className={s.actorImage}
-            />
-            <p>{actor.name}</p>
-          </li>
-        ))}
+        {cast.map((actor) =>
+          actor.profile_path ? (
+            <li key={actor.id} className={s.castItem}>
+              <img
+                src={`https://image.tmdb.org/t/p/w200${actor.profile_path}`}
+                alt={actor.name}
+                width="100"
+                className={s.actorImage}
+                onError={(e) => {
+                  e.target.parentElement.style.display = "none"; // Приховати весь li, якщо зображення не завантажилось
+                }}
+              />
+              <p>{actor.name}</p>
+            </li>
+          ) : null
+        )}
       </ul>
     </div>
   );

@@ -33,6 +33,11 @@
   margin-top: 20px;
 }
 
+.img {
+  border: 1px solid;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px 2px rgb(12, 12, 12);
+}
 .link {
   text-decoration: none;
   color: rgb(59, 4, 50);

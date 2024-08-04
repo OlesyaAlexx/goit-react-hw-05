@@ -6,6 +6,10 @@
   font-size: 40px;
   text-shadow: 2px 1px 2px rgb(179, 136, 143);
   color: aliceblue;
+  border-bottom: 1px solid rgb(201, 218, 215);
+  border-top: 1px solid rgb(201, 218, 215);
+  border-radius: 12px;
+  box-shadow: 2px 2px 5px 2px rgb(12, 12, 12);
 }
 
 .error {

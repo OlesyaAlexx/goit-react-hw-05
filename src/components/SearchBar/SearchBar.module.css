@@ -5,6 +5,10 @@
   justify-content: center;
   padding: 20px;
   background-color: rgb(69, 11, 71);
+  border-bottom: 1px solid rgb(201, 218, 215);
+  border-top: 1px solid rgb(201, 218, 215);
+  border-radius: 12px;
+  box-shadow: 2px 2px 5px 2px rgb(12, 12, 12);
 }
 
 .inputContainer {
