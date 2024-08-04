@@ -36,7 +36,7 @@ const SearchBar = ({ query, setQuery, handleSearch }) => {
         />
         <button
           className={s.search}
-          onClick={validateAndSearch} // Виклик функції валідації при натисканні кнопки
+          onClick={validateAndSearch} // Виклик функції валідації при натисканні на кнопку
         >
           Search
         </button>
