@@ -72,3 +72,14 @@
 .description {
   margin-bottom: 20px;
 }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .filmName {
+    font-size: 25px;
+  }
+
+  .link {
+    font-size: 18px;
+    padding: 5px 10px;
+  }
+}
